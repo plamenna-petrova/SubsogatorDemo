@@ -14,6 +14,7 @@ namespace Data.DataAccess
         }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions)
+            :base(dbContextOptions)
         {
 
         }
@@ -44,7 +45,8 @@ namespace Data.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
-            dbContextOptionsBuilder.UseSqlServer("Server=.;Database=SubsogatorDemo;Trusted_Connection=True;MultipleActiveResultSets=true");
+            dbContextOptionsBuilder.UseSqlServer("Server=.;Database=SubsogatorDemo;" +
+                "Trusted_Connection=True;MultipleActiveResultSets=true");
         }
     }
 }
