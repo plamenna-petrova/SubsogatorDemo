@@ -7,7 +7,7 @@ namespace Data.DataModels.Entities
 {
     public class Actor: BaseEntity
     {
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } 
 
         public string LastName { get; set; }
     }
